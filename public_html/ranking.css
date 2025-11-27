@@ -1,0 +1,206 @@
+/* ============================================
+   Estilos específicos para ranking.html
+   Colores azules, estilo limpio y amigable
+   ============================================ */
+
+/* Hero pequeño del ranking */
+.ranking-hero {
+    background: linear-gradient(90deg, #e5f1ff, #c7e0ff);
+    padding: 2.5rem 1rem;
+    margin-top: 0.5rem;
+}
+
+.ranking-hero-text {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.ranking-hero h1 {
+    font-size: 2.1rem;
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+}
+
+.ranking-hero p {
+    max-width: 700px;
+    font-size: 0.95rem;
+    color: #1f2933;
+}
+
+/* Contenedor principal del ranking */
+.ranking-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1rem 3rem;
+}
+
+/* Tarjeta que envuelve la tabla */
+.ranking-card {
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+    border-top: 5px solid #3b82f6;
+    overflow: hidden;
+}
+
+.ranking-card-header {
+    padding: 1.2rem 1.4rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.ranking-card-header h2 {
+    margin: 0 0 0.3rem;
+    font-size: 1.2rem;
+    color: #0f172a;
+}
+
+.ranking-card-header p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+/* Contenedor con scroll horizontal en pantallas chicas */
+.ranking-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Tabla del ranking */
+.ranking-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.ranking-table thead {
+    background: linear-gradient(90deg, #e5f1ff, #d0e5ff);
+}
+
+.ranking-table th,
+.ranking-table td {
+    padding: 0.75rem 0.8rem;
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* Encabezados */
+.ranking-table th {
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #374151;
+}
+
+/* Columna # centrada y angosta */
+.ranking-table th:first-child,
+.ranking-table td:first-child {
+    text-align: center;
+    width: 40px;
+}
+
+/* Caja y trabajos alineados a la derecha */
+.ranking-table th:nth-child(4),
+.ranking-table th:nth-child(5),
+.ranking-table td:nth-child(4),
+.ranking-table td:nth-child(5) {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Filas alternadas */
+.ranking-table tbody tr:nth-child(odd) {
+    background: #ffffff;
+}
+.ranking-table tbody tr:nth-child(even) {
+    background: #f3f6fb;
+}
+
+/* Hover suave */
+.ranking-table tbody tr:hover {
+    background: #e0edff;
+    transition: background 0.15s ease-out;
+}
+
+/* País: bandera + nombre */
+.ranking-pais {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.ranking-bandera {
+    font-size: 1.2rem;
+}
+
+/* Programador: icono + nombre */
+.ranking-programador {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.ranking-programador i {
+    font-size: 0.95rem;
+    color: #6b7280;
+}
+
+/* Caja: ícono + número */
+.ranking-caja {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.ranking-caja i {
+    font-size: 0.8rem;
+    color: #2563eb;
+}
+
+/* Instagram: ícono + @usuario */
+.ranking-instagram {
+    text-align: left;
+}
+
+.ranking-instagram a {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.ranking-instagram i {
+    font-size: 1.1rem;
+    color: #2563eb;
+}
+
+.ranking-instagram-user {
+    font-size: 0.86rem;
+    color: #1f2937;
+}
+
+/* Destacar top 3 */
+.ranking-row-1 {
+    border-left: 3px solid #facc15;
+}
+
+.ranking-row-2 {
+    border-left: 3px solid #9ca3af;
+}
+
+.ranking-row-3 {
+    border-left: 3px solid #fb923c;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .ranking-hero {
+        padding: 1.8rem 1rem;
+    }
+
+    .ranking-hero h1 {
+        font-size: 1.7rem;
+    }
+}

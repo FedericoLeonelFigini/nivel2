@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>tusitiowebadistancia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO POTENTE (IGUAL QUE EN INDEX) -->
+    <meta name="description" content="Hacemos sitios webs profesionales y 100% optimizados. Landing pages, sitios multipágina, e-commerce y mantenimiento web. Conectamos programadores con clientes de todo el mundo.">
+    <meta name="keywords" content="sitio web, sitio web a distancia, sitios web, landing page, sitio multipagina, pagina, e-commerce, ecommerce, tienda online, tienda móvil, apps, software, mantenimiento web, desarrollo web, diseño web, agencia web, mejores precios, vender más, tusitiowebadistancia">
+    <meta name="robots" content="index, follow" />
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="./imagenes/logo.png" />
+
+    <!-- CSS GLOBAL -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- CSS ESPECÍFICO DEL FORMULARIO -->
+    <link rel="stylesheet" href="formulario-sitio.css" />
+
+    <!-- GOOGLE TRADUCTOR -->
+    <meta name="google" content="notranslate">
+</head>
+<body>
+
+    <!-- ENCABEZADO (COPIADO DE INDEX) -->
+    <header>
+        <div class="logo-wrapper" onclick="window.open('https://wa.me/541141999497','_blank')">
+            <img src="./imagenes/logo.png" alt="Logo tusitiowebadistancia">
+            <span class="site-name">tusitiowebadistancia</span>
+        </div>
+
+        <div class="menu-toggle" id="menuToggle">
+            <span></span><span></span><span></span>
+        </div>
+
+        <nav id="mainNav">
+            <a href="index.html">Bienvenido</a>
+            <a href="./sitios.html">Sitios webs</a>
+            <a href="ranking.html">Ranking</a>
+            <a href="vender.html">Vender</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="ayuda.html">Ayuda</a>
+
+            <div class="translate-wrapper">
+                <div id="google_translate_element"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- FORMULARIO DE DIAGNÓSTICO 4 PASOS -->
+        <section class="main-diagnostico">
+            <div class="diagnostico-contenedor">
+                <h1 class="diagnostico-titulo">¿Qué tipo de sitio web necesitás?</h1>
+                <p class="diagnostico-intro">
+                    Respondé estas 4 preguntas rápidas y te recomendamos si te conviene una
+                    <strong>Landing Page</strong>, un <strong>sitio multipágina</strong> o un <strong>E-commerce</strong>.
+                </p>
+
+                <!-- Indicador de pasos -->
+                <div class="diagnostico-pasos-indicador">
+                    <div class="paso-indicador activo" data-paso="1">1</div>
+                    <div class="paso-indicador" data-paso="2">2</div>
+                    <div class="paso-indicador" data-paso="3">3</div>
+                    <div class="paso-indicador" data-paso="4">4</div>
+                </div>
+
+                <form id="form-diagnostico" class="diagnostico-form">
+                    <!-- PASO 1: VISIÓN -->
+                    <div class="paso active" data-paso="1">
+                        <h2>1. ¿Cuál es la visión de tu proyecto?</h2>
+                        <p class="paso-descripcion">Elegí la opción que mejor te represente.</p>
+
+                        <div class="opcion">
+                            <input type="radio" id="vision-campana" name="vision" value="campana" required>
+                            <label for="vision-campana">
+                                Quiero probar una idea o campaña puntual y conseguir consultas rápido.
+                            </label>
+                        </div>
+
+                        <div class="opcion">
+                            <input type="radio" id="vision-marca" name="vision" value="marca">
+                            <label for="vision-marca">
+                                Quiero posicionar mi marca y mostrar varios servicios o áreas del negocio.
+                            </label>
+                        </div>
+
+                        <div class="opcion">
+                            <input type="radio" id="vision-tienda" name="vision" value="tienda">
+                            <label for="vision-tienda">
+                                Quiero vender productos o servicios online con carrito y medios de pago.
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- PASO 2: PRESUPUESTO -->
+                    <div class="paso" data-paso="2">
+                        <h2>2. ¿Cómo es tu presupuesto inicial?</h2>
+                        <p class="paso-descripcion">No te preocupes, lo adaptamos a tu realidad.</p>
+
+                        <div class="opcion">
+                            <input type="radio" id="presupuesto-ajustado" name="presupuesto" value="ajustado" required>
+                            <label for="presupuesto-ajustado">
+                                Ajustado: necesito algo efectivo pero lo más económico posible.
+                            </label>
+                        </div>
+
+                        <div class="opcion">
+                            <input type="radio" id="presupuesto-equilibrado" name="presupuesto" value="equilibrado">
+                            <label for="presupuesto-equilibrado">
+                                Equilibrado: puedo invertir un poco más si realmente trae resultados.
+                            </label>
+                        </div>
+
+                        <div class="opcion">
+                            <input type="radio" id="presupuesto-inversion" name="presupuesto" value="inversion">
+                            <label for="presupuesto-inversion">
+                                Fuerte: lo veo como una inversión clave para escalar mi negocio.
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- PASO 3: CONTENIDO / ESTRUCTURA -->
+                    <div class="paso" data-paso="3">
+                        <h2>3. ¿Cómo imaginás la estructura del contenido?</h2>
+                        <p class="paso-descripcion">Pensá en la cantidad de secciones que te gustaría.</p>
+
+                        <div class="opcion">
+                            <input type="radio" id="estructura-simple" name="estructura" value="simple" required>
+                            <label for="estructura-simple">
+                                Simple: una página con toda la información clave, sin demasiadas secciones.
+                            </label>
+                        </div>
+
+                        <div class="opcion">
+                            <input type="radio" id="estructura-completa" name="estructura" value="completa">
+                            <label for="estructura-completa">
+                                Completa: varias secciones (inicio, servicios, sobre nosotros, contacto, etc.).
+                            </label>
+                        </div>
+
+                        <div class="opcion">
+                            <input type="radio" id="estructura-catalogo" name="estructura" value="catalogo">
+                            <label for="estructura-catalogo">
+                                Catálogo: muchos productos o servicios organizados por categorías.
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- PASO 4: VALORES / RELACIÓN CON EL CLIENTE -->
+                    <div class="paso" data-paso="4">
+                        <h2>4. ¿Qué valorás más en tu sitio?</h2>
+                        <p class="paso-descripcion">Marcá lo que sea más importante para vos.</p>
+
+                        <div class="opcion">
+                            <input type="radio" id="valor-rapidez" name="valor" value="rapidez" required>
+                            <label for="valor-rapidez">
+                                Rapidez para lanzar campañas y medir resultados.
+                            </label>
+                        </div>
+
+                        <div class="opcion">
+                            <input type="radio" id="valor-presencia" name="valor" value="presencia">
+                            <label for="valor-presencia">
+                                Presencia profesional, confiable y a largo plazo.
+                            </label>
+                        </div>
+
+                        <div class="opcion">
+                            <input type="radio" id="valor-experiencia" name="valor" value="experiencia">
+                            <label for="valor-experiencia">
+                                Experiencia de compra cómoda: carrito, pagos online y automatización.
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- NAVEGACIÓN ENTRE PASOS -->
+                    <div class="diagnostico-nav">
+                        <button type="button" id="btn-anterior" class="btn-nav" disabled>Anterior</button>
+                        <button type="button" id="btn-siguiente" class="btn-nav">Siguiente</button>
+                        <button type="submit" id="btn-ver-resultado" class="btn-resultado" style="display:none;">
+                            Ver resultado
+                        </button>
+                    </div>
+                </form>
+
+                <!-- RESULTADO -->
+                <section id="resultado-sitio" class="resultado-sitio oculto">
+                    <div id="resultado-icono" class="resultado-icono">✨</div>
+                    <h2 id="resultado-titulo" class="resultado-titulo">
+                        Te recomendamos una Landing Page
+                    </h2>
+                    <p id="resultado-descripcion" class="resultado-descripcion">
+                        Según tus respuestas, una Landing Page es la mejor opción para iniciar.
+                    </p>
+                    <!-- Botón "Ver más" que redirige -->
+                    <a id="resultado-ver-mas" href="sitios.html#landing" class="btn-ver-mas">
+                        Ver más
+                    </a>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (COPIADO DE INDEX) -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <span>2025 © tusitiowebadistancia</span>
+
+                <div class="footer-links">
+                    <a href="https://wa.me/541141999497" target="_blank">WhatsApp</a>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                </div>
+            </div>
+
+            <div class="footer-thumbs">
+                <img src="./imagenes/logo.png">
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS GLOBAL -->
+    <script src="script.js"></script>
+
+    <!-- Google Translate Script -->
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'es'},
+                'google_translate_element'
+            );
+        }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- JS DEL FORMULARIO (LO QUE TE PASÉ ANTES COMO formulario-sitio.js) -->
+    <script src="formulario-sitio.js"></script>
+
+</body>
+</html>

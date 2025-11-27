@@ -1,0 +1,149 @@
+main {
+    padding: 120px 20px 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contacto-hero {
+    background: linear-gradient(135deg, #ffffff 0%, #e3f2ff 40%, #b5d9ff 100%);
+    border-radius: 18px;
+    padding: 30px 24px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.contacto-claim {
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 10px;
+}
+
+.contacto-claim span {
+    color: #0070ea;
+}
+
+.contacto-sub {
+    font-size: 0.98rem;
+    margin-bottom: 16px;
+}
+
+.contacto-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px;
+    font-size: 0.9rem;
+}
+
+.contacto-lista li {
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 18px;
+}
+
+.contacto-lista li::before {
+    content: "•";
+    position: absolute;
+    left: 4px;
+    top: 0;
+    color: #0070ea;
+}
+
+.contacto-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 999px;
+    background: #0070ea;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    box-shadow: 0 6px 18px rgba(0, 112, 234, 0.25);
+}
+
+.contacto-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(0, 112, 234, 0.32);
+    background: #005fcc;
+}
+
+.contacto-mini-text {
+    font-size: 0.8rem;
+    opacity: 0.85;
+    margin-top: 8px;
+}
+
+.contacto-lado-derecho {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 18px 16px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+    font-size: 0.9rem;
+}
+
+.contacto-resumen strong {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.contacto-resumen span {
+    color: #0070ea;
+    font-weight: 600;
+}
+
+.contacto-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.badge {
+    font-size: 0.78rem;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 112, 234, 0.18);
+    background-color: rgba(255, 255, 255, 0.9);
+    white-space: nowrap;
+}
+
+.contacto-alt {
+    margin-top: 26px;
+    text-align: center;
+    font-size: 0.86rem;
+    opacity: 0.9;
+}
+
+.contacto-alt a {
+    color: #0070ea;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contacto-alt a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 95px 16px 40px;
+    }
+
+    .contacto-hero {
+        grid-template-columns: 1fr;
+        padding: 22px 18px;
+    }
+
+    .contacto-claim {
+        font-size: 1.9rem;
+    }
+
+    .contacto-lado-derecho {
+        margin-top: 10px;
+    }
+}

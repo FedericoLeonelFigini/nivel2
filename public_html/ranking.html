@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Ranking de programadores | tusitiowebadistancia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO POTENTE (igual que en index) -->
+    <meta name="description" content="Hacemos sitios webs profesionales y 100% optimizados. Landing pages, sitios multipágina, e-commerce y mantenimiento web. Conectamos programadores con clientes de todo el mundo.">
+    <meta name="keywords" content="sitio web, sitio web a distancia, sitios web, landing page, sitio multipagina, pagina, e-commerce, ecommerce, tienda online, tienda móvil, apps, software, mantenimiento web, desarrollo web, diseño web, agencia web, mejores precios, vender más, tusitiowebadistancia">
+    <meta name="robots" content="index, follow" />
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="./imagenes/logo.png" />
+
+    <!-- CSS GENERAL -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- CSS ESPECÍFICO DEL RANKING -->
+    <link rel="stylesheet" href="ranking.css" />
+
+    <!-- GOOGLE TRADUCTOR -->
+    <meta name="google" content="notranslate">
+
+    <!-- ICONOS FONT AWESOME -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-xh6O/CkQoPOWDd7SUSq5bOzYcN2yZL9L7Soxu48n8Z3aC8kqYqGkLisvRXIe7xwCk1/1a1S8YrY4FZpY7GIlrQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- =========== HEADER (COPIADO DEL INDEX) =========== -->
+    <header>
+        <div class="logo-wrapper" onclick="window.open('https://wa.me/541141999497','_blank')">
+            <img src="./imagenes/logo.png" alt="Logo tusitiowebadistancia">
+            <span class="site-name">tusitiowebadistancia</span>
+        </div>
+
+        <div class="menu-toggle" id="menuToggle">
+            <span></span><span></span><span></span>
+        </div>
+
+        <nav id="mainNav">
+            <a href="index.html">Bienvenido</a>
+            <a href="sitios.html">Sitios webs</a>
+            <a href="ranking.html">Ranking</a>
+            <a href="vender.html">Vender</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="ayuda.html">Ayuda</a>
+
+            <div class="translate-wrapper">
+                <div id="google_translate_element"></div>
+            </div>
+        </nav>
+    </header>
+    <!-- =========== FIN HEADER =========== -->
+
+    <main>
+        <!-- PEQUEÑO HERO DEL RANKING (AZUL, AMIGABLE) -->
+        <section class="ranking-hero">
+            <div class="ranking-hero-text">
+                <h1>Ranking de programadores</h1>
+                <p>
+                    Acá podés ver a los programadores de <strong>tusitiowebadistancia</strong>, 
+                    su país, la caja acumulada y la cantidad de trabajos realizados.
+                    
+                </p>
+            </div>
+        </section>
+
+        <!-- TABLA DE RANKING -->
+        <section class="ranking-section">
+            <div class="ranking-card">
+                <div class="ranking-card-header">
+                    <h2>Tabla actual</h2>
+                    
+                </div>
+
+                <div class="ranking-table-wrapper">
+                    <table class="ranking-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>País</th>
+                                <th>Programador</th>
+                                <th>Caja</th>
+                                <th>Trabajos</th>
+                                <th>Instagram</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ranking-body">
+                            <!-- Filas generadas por ranking.js -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========== FOOTER (COPIADO DEL INDEX) =========== -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <span>2025 © tusitiowebadistancia</span>
+
+                <div class="footer-links">
+                    <a href="https://wa.me/541141999497" target="_blank">WhatsApp</a>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                </div>
+            </div>
+
+            <div class="footer-thumbs">
+                <img src="./imagenes/logo.png" alt="Logo tusitiowebadistancia">
+            </div>
+        </div>
+    </footer>
+    <!-- =========== FIN FOOTER =========== -->
+
+    <!-- JS GENERAL -->
+    <script src="script.js"></script>
+    <!-- JS DEL RANKING -->
+    <script src="ranking.js"></script>
+
+    <!-- Google Translate Script -->
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'es'},
+                'google_translate_element'
+            );
+        }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Sitio Multipágina | tusitiowebadistancia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO POTENTE -->
+    <meta name="description" content="Plan Multipágina: desarrollamos sitios corporativos completos, modernos y optimizados. Más de 10 páginas, SEO avanzado, CMS, animaciones y mantenimiento inicial para empresas que quieren crecer en serio.">
+    <meta name="keywords" content="sitio multipagina, sitio corporativo, paginas web empresa, sitio web profesional, desarrollo web, tusitiowebadistancia, SEO avanzado, CMS, blog corporativo, landing, tienda online">
+    <meta name="robots" content="index, follow" />
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="./imagenes/logo.png" />
+
+    <!-- CSS GLOBAL -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- GOOGLE TRADUCTOR -->
+    <meta name="google" content="notranslate">
+
+    <!-- ESTILOS ESPECÍFICOS DE ESTA PÁGINA -->
+    <style>
+        main.ver-multipagina {
+            padding: 120px 16px 80px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .multipagina-hero {
+            margin-bottom: 26px;
+        }
+
+        .multipagina-hero h1 {
+            font-size: 2.3rem;
+            margin-bottom: 4px;
+            color: #0056b3;
+        }
+
+        .multipagina-hero p {
+            max-width: 720px;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .info-titulo {
+            margin-top: 18px;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0066ff;
+        }
+
+        /* PANEL PRINCIPAL CON DEGRADADO E IMAGEN (MISMO ESTILO DE LA FOTO) */
+        .panel-degradado {
+            border-radius: 24px;
+            padding: 24px 26px;
+            background: linear-gradient(135deg, #ffffff 0%, #e3f2ff 40%, #c7e1ff 100%);
+            box-shadow: 0 18px 40px rgba(15, 53, 110, 0.18);
+            border: 1px solid rgba(0, 84, 180, 0.12);
+        }
+
+        .panel-degradado-inner {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .panel-degradado h2 {
+            font-size: 1.3rem;
+            margin-bottom: 14px;
+        }
+
+        .panel-degradado ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .panel-degradado li {
+            position: relative;
+            padding-left: 34px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .panel-degradado li::before {
+            content: "✔";
+            position: absolute;
+            left: 8px;
+            top: 2px;
+            width: 20px;
+            height: 20px;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            background: #0d6efd;
+            color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+        }
+
+        .azul {
+            color: #0066ff;
+            font-weight: 700;
+        }
+
+        .panel-imagen {
+            text-align: center;
+        }
+
+        .panel-imagen img {
+            max-width: 100%;
+            border-radius: 18px;
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
+        }
+
+        /* BLOQUES INFERIORES (DEJA TODO COMO ESTABA) */
+        .bloque {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 22px;
+            margin-top: 28px;
+            margin-bottom: 28px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        .bloque h2 {
+            margin-bottom: 8px;
+        }
+
+        .bloque p.bloque-intro {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            margin-bottom: 18px;
+        }
+
+        .beneficios-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .beneficio-card {
+            padding: 14px 14px 16px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #f8fbff 0%, #e8f3ff 100%);
+            border: 1px solid rgba(0, 123, 255, 0.15);
+        }
+
+        .beneficio-card strong {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 4px;
+        }
+
+        .beneficio-card span.label {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            opacity: 0.7;
+            margin-bottom: 4px;
+        }
+
+        .beneficio-card p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .campanias-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .campania-card {
+            display: flex;
+            gap: 12px;
+            padding: 14px;
+            border-radius: 16px;
+            background: #f9fbff;
+            border: 1px dashed rgba(0, 96, 190, 0.25);
+            align-items: flex-start;
+        }
+
+        .campania-logo {
+            width: 40px;
+            min-width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .campania-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .campania-body h3 {
+            font-size: 0.98rem;
+            margin-bottom: 4px;
+        }
+
+        .campania-body small {
+            display: block;
+            font-size: 0.78rem;
+            opacity: 0.75;
+            margin-bottom: 4px;
+        }
+
+        .campania-body p {
+            font-size: 0.88rem;
+            margin-bottom: 4px;
+        }
+
+        .campania-result {
+            font-size: 0.82rem;
+            font-weight: 600;
+        }
+
+        .cta-final {
+            text-align: center;
+            margin-top: 32px;
+        }
+
+        .cta-final p {
+            margin-bottom: 14px;
+        }
+
+        .cta-final .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: #ffffff;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            main.ver-multipagina {
+                padding-top: 90px;
+            }
+
+            .panel-degradado-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .panel-imagen {
+                order: -1;
+            }
+
+            .beneficios-grid,
+            .campanias-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .multipagina-hero h1 {
+                font-size: 1.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-wrapper" onclick="window.open('https://wa.me/541141999497','_blank')">
+            <img src="./imagenes/logo.png" alt="Logo tusitiowebadistancia">
+            <span class="site-name">tusitiowebadistancia</span>
+        </div>
+
+        <div class="menu-toggle" id="menuToggle">
+            <span></span><span></span><span></span>
+        </div>
+
+        <nav id="mainNav">
+            <a href="index.html">Bienvenido</a>
+            <a href="./sitios.html">Sitios webs</a>
+            <a href="ranking.html">Ranking</a>
+            <a href="vender.html">Vender</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="tienda.html">Tienda</a>
+
+            <div class="translate-wrapper">
+                <div id="google_translate_element"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="ver-multipagina">
+        <!-- TÍTULO PRINCIPAL -->
+        <section class="plan-hero-section">
+    <div class="plan-hero">
+        <div class="plan-hero-content">
+            <h1 class="plan-title">Sitio Multipágina</h1>
+            <p class="plan-text">
+                Con el Plan Multipágina construimos un sitio corporativo completo, moderno y
+                optimizado para empresas que necesitan mostrar servicios, productos, equipo, blog y
+                contacto con una estructura profesional y pensada para vender.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+        <h2 class="info-titulo">Información</h2>
+
+        <!-- PANEL PRINCIPAL: ÍTEMS + IMAGEN (MISMO ESTILO QUE LA LANDING) -->
+        <section class="panel-degradado">
+            <div class="panel-degradado-inner">
+                <div>
+                    <h2>¿Qué incluye tu Sitio Multipágina optimizado?</h2>
+                    <ul>
+                        <li>
+                            <span class="azul">Estructura completa por secciones:</span>
+                            Inicio, Servicios, Portfolio, Equipo, Blog y Contacto 
+                            integrados para transmitir <strong>credibilidad y seriedad empresarial</strong>.
+                        </li>
+                        <li>
+                            <span class="azul">Diseño moderno y corporativo:</span>
+                            layout limpio, jerarquía visual clara y componentes reutilizables en todas las páginas 
+                            para que tu marca se vea <strong>coherente y profesional</strong>.
+                        </li>
+                        <li>
+                            <span class="azul">SEO avanzado aplicado:</span>
+                            títulos, meta descripciones y estructura H1–H2–H3 pensadas para 
+                            <strong>posicionar mejor tus servicios y contenidos</strong> en buscadores.
+                        </li>
+                        <li>
+                            <span class="azul">Formularios estratégicos:</span>
+                            puntos de contacto distribuidos en distintas secciones (Servicios, Contacto, 
+                            páginas internas) para <strong>aumentar consultas y leads calificados</strong>.
+                        </li>
+                        <li>
+                            <span class="azul">Panel administrativo (CMS):</span>
+                            acceso para editar textos, imágenes, noticias y entradas de blog sin necesidad 
+                            de programar, manteniendo <strong>el sitio siempre actualizado</strong>.
+                        </li>
+                        <li>
+                            <span class="azul">Optimización de carga y seguridad:</span>
+                            recursos minificados, buenas prácticas técnicas y configuración segura para que el sitio 
+                            sea <strong>rápido, estable y confiable</strong>.
+                        </li>
+                        <li>
+                            <span class="azul">Animaciones suaves y experiencia UX/UI:</span>
+                            transiciones discretas, efectos sutiles y navegación clara que 
+                            <strong>mantiene la atención del usuario</strong> sin saturarlo.
+                        </li>
+                        <li>
+                            <span class="azul">Mantenimiento inicial incluido:</span>
+                            ajustes técnicos y de contenido en la etapa de lanzamiento para que el sitio 
+                            salga a campañas <strong>en su mejor versión</strong>.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="panel-imagen">
+                    <!-- Cambia la ruta por una captura de un sitio multipágina -->
+                    <img src="./imagenes/multipagina-ejemplo.jpg" alt="Ejemplo de Sitio Multipágina profesional">
+                </div>
+            </div>
+        </section>
+
+        <!-- BENEFICIOS EN CAMPAÑAS REALES (SE MANTIENE) -->
+        <section class="bloque">
+            <h2>Beneficios en campañas reales con un sitio multipágina optimizado</h2>
+            <p class="bloque-intro">
+                Un sitio multipágina bien estructurado no solo se ve profesional: 
+                mejora los resultados de tus campañas y la percepción de tu marca. 
+                Estos son <strong>beneficios típicos</strong> que suelen obtener empresas que pasan 
+                de un sitio básico a un multipágina optimizado:
+            </p>
+
+            <div class="beneficios-grid">
+                <div class="beneficio-card">
+                    <span class="label">Engagement</span>
+                    <strong>+70% páginas vistas</strong>
+                    <p>
+                        Al tener secciones claras (Servicios, Portfolio, Equipo, Blog), el usuario 
+                        recorre más contenido y se queda más tiempo en tu web.
+                    </p>
+                </div>
+
+                <div class="beneficio-card">
+                    <span class="label">Calidad de leads</span>
+                    <strong>+40% consultas calificadas</strong>
+                    <p>
+                        Los formularios ubicados en secciones estratégicas atraen contactos 
+                        que ya entendieron qué hacés y cómo podés ayudarlos.
+                    </p>
+                </div>
+
+                <div class="beneficio-card">
+                    <span class="label">Confianza</span>
+                    <strong>+55% sensación de profesionalismo</strong>
+                    <p>
+                        Mostrar equipo, casos de éxito y blog activo aumenta la confianza y 
+                        reduce el miedo a contratar un servicio nuevo.
+                    </p>
+                </div>
+
+                <div class="beneficio-card">
+                    <span class="label">Rentabilidad</span>
+                    <strong>-30% costo por lead</strong>
+                    <p>
+                        Al combinar SEO avanzado con campañas de pago, una parte de los contactos 
+                        llega de forma orgánica, reduciendo el costo total por cliente.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAMPAÑAS DE MARKETING CON HERRAMIENTAS (SE MANTIENE) -->
+        <section class="bloque">
+            <h2>Campañas de marketing que aprovechan tu sitio multipágina</h2>
+            <p class="bloque-intro">
+                Tu sitio multipágina es el <strong>centro de tus campañas</strong>. 
+                Desde ahí medimos resultados, mejoramos la experiencia y escalamos ventas. 
+                Estos son ejemplos de campañas reales usando distintas herramientas:
+            </p>
+
+            <div class="campanias-grid">
+                <!-- Google Ads -->
+                <article class="campania-card">
+                    <div class="campania-logo">
+                        <img src="./imagenes/google-ads-logo.png" alt="Google Ads">
+                    </div>
+                    <div class="campania-body">
+                        <h3>Google Ads (Búsqueda &amp; Display)</h3>
+                        <small>Tráfico caliente listo para comprar</small>
+                        <p>
+                            Campañas de búsqueda apuntando a servicios específicos del sitio 
+                            (por ejemplo: /servicios, /consultoria, /planes).
+                        </p>
+                        <div class="campania-result">
+                            Ejemplo: hasta un <strong>+35% más conversiones</strong> cuando el anuncio 
+                            dirige a una página de servicio bien optimizada en vez de a la home genérica.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Meta Ads -->
+                <article class="campania-card">
+                    <div class="campania-logo">
+                        <img src="./imagenes/meta-ads-logo.png" alt="Meta Ads">
+                    </div>
+                    <div class="campania-body">
+                        <h3>Meta Ads (Facebook &amp; Instagram)</h3>
+                        <small>Campañas visuales y remarketing</small>
+                        <p>
+                            Anuncios con testimonios, casos de éxito y piezas que llevan al 
+                            portfolio o a una página de servicio específica.
+                        </p>
+                        <div class="campania-result">
+                            Ejemplo: <strong>+25% clics</strong> y <strong>+20% mensajes</strong> cuando se 
+                            muestra el portfolio y testimonios dentro del sitio multipágina.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Email Marketing -->
+                <article class="campania-card">
+                    <div class="campania-logo">
+                        <img src="./imagenes/email-marketing-logo.png" alt="Email Marketing">
+                    </div>
+                    <div class="campania-body">
+                        <h3>Email marketing (Mailchimp, Brevo, etc.)</h3>
+                        <small>Nutrición de leads y fidelización</small>
+                        <p>
+                            Secuencias de correos que envían a artículos del blog, 
+                            páginas de productos y casos de éxito dentro del sitio.
+                        </p>
+                        <div class="campania-result">
+                            Ejemplo: <strong>el doble de clics</strong> cuando el email apunta a 
+                            contenido útil en tu blog en vez de solo vender en un párrafo.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- LinkedIn Ads -->
+                <article class="campania-card">
+                    <div class="campania-logo">
+                        <img src="./imagenes/linkedin-ads-logo.png" alt="LinkedIn Ads">
+                    </div>
+                    <div class="campania-body">
+                        <h3>LinkedIn Ads (B2B y servicios profesionales)</h3>
+                        <small>Empresas, servicios corporativos y consultoras</small>
+                        <p>
+                            Anuncios que dirigen a secciones como “Equipo”, “Servicios B2B” o 
+                            “Casos de estudio” para reforzar autoridad.
+                        </p>
+                        <div class="campania-result">
+                            Ejemplo: <strong>+30% leads B2B calificados</strong> cuando el sitio 
+                            muestra claramente quién sos y qué resultados entregás.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- SEO + Contenido -->
+                <article class="campania-card">
+                    <div class="campania-logo">
+                        <img src="./imagenes/seo-logo.png" alt="SEO Orgánico">
+                    </div>
+                    <div class="campania-body">
+                        <h3>SEO orgánico + contenido del blog</h3>
+                        <small>Tráfico constante sin pagar por clic</small>
+                        <p>
+                            Artículos del blog enfocados en problemas reales de tus clientes, 
+                            conectados a servicios y formularios de contacto.
+                        </p>
+                        <div class="campania-result">
+                            Ejemplo: crecimiento <strong>mes a mes</strong> del tráfico orgánico y 
+                            leads que llegan sin depender solo de la publicidad paga.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Remarketing -->
+                <article class="campania-card">
+                    <div class="campania-logo">
+                        <img src="./imagenes/remarketing-logo.png" alt="Remarketing">
+                    </div>
+                    <div class="campania-body">
+                        <h3>Remarketing (Google &amp; Meta)</h3>
+                        <small>Recuperar visitas que no convirtieron</small>
+                        <p>
+                            Anuncios que vuelven a mostrar tu marca a personas que visitaron 
+                            páginas clave del sitio (servicios, pricing, contacto).
+                        </p>
+                        <div class="campania-result">
+                            Ejemplo: <strong>+20–40% conversiones</strong> al recordar tu propuesta a 
+                            quienes ya te conocieron pero no dejaron sus datos.
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CTA FINAL (SIN BOTÓN DE FORMULARIO) -->
+        <section class="cta-final">
+            <p>
+                ¿Querés un <strong>sitio multipágina</strong> que represente a tu empresa como se merece 
+                y esté listo para campañas reales?
+            </p>
+            <a href="https://wa.me/541141999497?text=Quiero%20mi%20sitio%20multip%C3%A1gina" target="_blank" class="btn btn-whatsapp">
+                Quiero mi sitio multipágina
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <span>2025 © tusitiowebadistancia</span>
+
+                <div class="footer-links">
+                    <a href="https://wa.me/541141999497" target="_blank">WhatsApp</a>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                </div>
+            </div>
+
+            <div class="footer-thumbs">
+                <img src="./imagenes/logo.png" alt="Logo tusitiowebadistancia">
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+    <!-- Google Translate Script -->
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'es'},
+                'google_translate_element'
+            );
+        }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

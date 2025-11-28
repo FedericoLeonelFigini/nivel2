@@ -10,26 +10,26 @@ const programadores = [
   {
     paisNombre: "Argentina",
     banderaEmoji: "🇦🇷",
-    nombreCompleto: "Lucas Fernández",
+    nombreCompleto: "Tomas Stutz",
     caja: 0,
     trabajos: 0,
-    instagramUser: "lucas.dev"
+    instagramUser: "tomas_stutz"
   },
   {
     paisNombre: "Argentina",
     banderaEmoji: "🇦🇷",
-    nombreCompleto: "Martina Rojas",
+    nombreCompleto: "Facundo Amelotti",
     caja: 0,
     trabajos: 0,
-    instagramUser: "martina.codes"
+    instagramUser: "facuamelotti"
   },
   {
     paisNombre: "Argentina",
     banderaEmoji: "🇦🇷",
-    nombreCompleto: "Santiago López",
+    nombreCompleto: "Bautista Serqueira",
     caja: 0,
     trabajos: 0,
-    instagramUser: "santi.web"
+    instagramUser: "bauserfu"
   }
   // EJEMPLO:
   // {

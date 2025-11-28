@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>tusitiowebadistancia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO POTENTE -->
+    <meta name="description" content="Landing pages optimizadas para velocidad, posicionamiento y rendimiento. Diseñadas bajo principios UX/UI moderna y preparadas para campañas de marketing de alto impacto.">
+    <meta name="keywords" content="landing page, landing optimizada, campañas de marketing, sitios web, tusitiowebadistancia, UX UI, SEO, anuncios, Google Ads, Instagram Ads">
+    <meta name="robots" content="index, follow" />
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="./imagenes/logo.png" />
+
+    <!-- CSS GENERAL -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- GOOGLE TRADUCTOR -->
+    <meta name="google" content="notranslate">
+
+    <!-- ESTILOS ESPECÍFICOS LANDING -->
+    <style>
+        .titulo-landing {
+            font-size: clamp(2.4rem, 5vw, 3.2rem);
+            text-align: center;
+            color: #0b6efd;
+            font-weight: 800;
+            letter-spacing: 0.03em;
+            margin-bottom: 0.4rem;
+        }
+
+        .subtitulo-landing {
+            text-align: center;
+            color: #0b6efd;
+            opacity: 0.85;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .landing-info h2,
+        .landing-marketing h2,
+        .landing-cta-final h2 {
+            color: #0b6efd;
+            font-weight: 800;
+        }
+
+        /* PANEL AZUL CON DEGRADADO */
+        .panel-azul {
+            background: linear-gradient(135deg, #ffffff, #e4f0ff, #0b6efd);
+            border-radius: 20px;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+            gap: 2rem;
+            align-items: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+        }
+
+        @media (max-width: 768px) {
+            .panel-azul {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .panel-azul h3 {
+            color: #0b6efd;
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            font-weight: 800;
+        }
+
+        .panel-azul ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .panel-azul li {
+            margin-bottom: 0.9rem;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .panel-azul li strong {
+            color: #0b6efd;
+            font-weight: 800;
+        }
+
+        .panel-azul li::before {
+            content: "✓";
+            margin-right: 0.5rem;
+            font-weight: 900;
+            color: #ffffff;
+            background: rgba(11, 110, 253, 0.8);
+            border-radius: 999px;
+            padding: 0.1rem 0.45rem;
+            font-size: 0.75rem;
+        }
+
+        .panel-azul-imagen {
+            text-align: center;
+        }
+
+        .panel-azul-imagen img {
+            max-width: 100%;
+            border-radius: 18px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+        }
+
+        /* BENEFICIOS CON PORCENTAJES */
+        .beneficios-analisis h3 {
+            color: #0b6efd;
+            font-weight: 700;
+        }
+
+        .beneficios-analisis ul {
+            padding-left: 1.2rem;
+        }
+
+        .beneficios-analisis ul li {
+            margin-bottom: 0.65rem;
+        }
+
+        .beneficios-analisis ul li strong {
+            color: #0b6efd;
+        }
+
+        .beneficios-analisis .porcentaje {
+            font-weight: 800;
+        }
+
+        .nota-beneficios {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+
+        /* GRID DE MARKETING */
+        .marketing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .marketing-item {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 1.2rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .marketing-item img {
+            max-width: 120px;
+            height: auto;
+            margin-bottom: 0.6rem;
+        }
+
+        .marketing-item h3 {
+            color: #0b6efd;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+            font-size: 1.02rem;
+        }
+
+        .marketing-item p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .marketing-metricas {
+            margin-top: 0.45rem;
+            font-size: 0.85rem;
+        }
+
+        .marketing-metricas strong {
+            color: #0b6efd;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-wrapper" onclick="window.open('https://wa.me/541141999497','_blank')">
+        <img src="./imagenes/logo.png" alt="Logo tusitiowebadistancia">
+        <span class="site-name">tusitiowebadistancia</span>
+    </div>
+
+    <div class="menu-toggle" id="menuToggle">
+        <span></span><span></span><span></span>
+    </div>
+
+    <nav id="mainNav">
+        <a href="index.html">Bienvenido</a>
+        <a href="./sitios.html">Sitios webs</a>
+        <a href="ranking.html">Ranking</a>
+        <a href="vender.html">Vender</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="tienda.html">Tienda</a>
+
+        <div class="translate-wrapper">
+            <div id="google_translate_element"></div>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+    <!-- TÍTULO PRINCIPAL -->
+    <section class="plan-hero-section">
+    <div class="plan-hero">
+        <div class="plan-hero-content">
+            <h1 class="plan-title">Landing Page</h1>
+            <p class="plan-text">
+                Desarrollada para velocidad, posicionamiento y campañas de marketing que convierten.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- SECCIÓN INFORMACIÓN (DESGLOSADA EN ITEMS + PANEL AZUL) -->
+    <section class="card landing-info">
+        <h2>Información</h2>
+
+        <!-- PANEL AZUL CON DEGRADADO + IMAGEN -->
+        <div class="panel-azul">
+            <div>
+                <h3>¿Qué incluye tu Landing Page optimizada?</h3>
+                <ul>
+                    <li>
+                        <strong>Velocidad y rendimiento:</strong>
+                        estructura técnica ligera pensada para que la página cargue rápido en
+                        <strong>móvil, tablet y escritorio</strong>.
+                    </li>
+                    <li>
+                        <strong>SEO inicial aplicado:</strong>
+                        estructura SEO base (títulos, meta descripciones, jerarquía H1–H2–H3) preparada para
+                        <strong>posicionar mejor tus campañas</strong> y futuras búsquedas orgánicas.
+                    </li>
+                    <li>
+                        <strong>CTAs estratégicos:</strong>
+                        botones colocados en los puntos clave de scroll para <strong>guiar al usuario a la acción</strong>
+                        (contactar, comprar, reservar, agendar).
+                    </li>
+                    <li>
+                        <strong>UX/UI moderna:</strong>
+                        diseño limpio, secciones claras, textos cortos y visuales que <strong>mantienen la atención</strong>
+                        del visitante y reducen el abandono.
+                    </li>
+                    <li>
+                        <strong>Branding alineado:</strong>
+                        colores, tipografía e identidad visual enfocados en reforzar <strong>tu marca</strong> y
+                        atraer clientes de alto valor.
+                    </li>
+                    <li>
+                        <strong>Copywriting estratégico:</strong>
+                        textos pensados para <strong>vender</strong>, respondiendo objeciones, explicando beneficios y
+                        destacando tu propuesta de valor.
+                    </li>
+                    <li>
+                        <strong>Animaciones suaves y efectos premium:</strong>
+                        microanimaciones y transiciones que dan una experiencia <strong>profesional y moderna</strong>
+                        sin saturar al usuario.
+                    </li>
+                    <li>
+                        <strong>Compatibilidad total:</strong>
+                        diseño totalmente responsive, funcional y testeado en los principales navegadores y dispositivos.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="panel-azul-imagen">
+                <img src="./imagenes/landing-informacion.jpg" alt="Ejemplo de Landing Page profesional">
+            </div>
+        </div>
+
+        <!-- BENEFICIOS EN PORCENTAJES (SÍNTESIS) -->
+        <div class="beneficios-analisis" style="margin-top:1.8rem;">
+            <h3>Beneficios potenciales (estimados con una Landing bien diseñada)</h3>
+            <ul>
+                <li>
+                    <strong><span class="porcentaje">Hasta +300% más consultas</span></strong>
+                    respecto a enviar tráfico a una página genérica o poco clara.
+                </li>
+                <li>
+                    <strong><span class="porcentaje">+30% a +50% en tasa de conversión</span></strong>
+                    cuando se combinan CTAs bien ubicados, buen copy y diseño UX/UI enfocado en una sola acción.
+                </li>
+                <li>
+                    <strong><span class="porcentaje">Hasta 40% mejor velocidad percibida</span></strong>
+                    al optimizar imágenes, código y estructura técnica.
+                </li>
+                <li>
+                    <strong><span class="porcentaje">+25% a +60% en recordación de marca</span></strong>
+                    gracias a una identidad visual consistente, animaciones suaves y uso correcto de video/imágenes.
+                </li>
+                <li>
+                    <strong><span class="porcentaje">+20% a +40% en calidad de leads</span></strong>
+                    al alinear mensaje, segmentación y propuesta de valor para atraer clientes de mayor ticket.
+                </li>
+            </ul>
+            <p class="nota-beneficios">
+                Los porcentajes son rangos habituales observados en campañas con Landing Pages bien trabajadas.
+                Los resultados reales dependen del rubro, la oferta, el presupuesto y la calidad de la segmentación.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CAMPAÑA DE MARKETING (HERRAMIENTAS + BENEFICIOS) -->
+    <section class="card landing-marketing">
+        <h2>Campaña de marketing</h2>
+        <p>
+            Tu Landing Page se conecta con las principales plataformas de anuncios para transformar tráfico en resultados.
+            A continuación, algunas métricas típicas y beneficios que podés conseguir al integrarla con cada herramienta.
+        </p>
+
+        <div class="marketing-grid">
+            <!-- Google Ads -->
+            <article class="marketing-item">
+                <img src="./imagenes/google-ads.png" alt="Google Ads">
+                <h3>Google Ads (Búsqueda & Display)</h3>
+                <p>
+                    Ideal para captar personas que ya están buscando tu servicio o producto. Perfecto para campañas
+                    con intención alta (ej: “desarrollo de páginas web”, “landing page para campañas”).
+                </p>
+                <p class="marketing-metricas">
+                    <strong>Beneficios típicos con Landing Page:</strong><br>
+                    • CTR (clics sobre impresiones) habitual en búsquedas: <strong>3% a 7%</strong>.<br>
+                    • Tasa de conversión en Landing bien optimizada: <strong>5% a 15%</strong> según rubro.<br>
+                    • Costo por lead más bajo al filtrar mejor el tráfico y evitar clics desperdiciados.
+                </p>
+            </article>
+
+            <!-- Meta / Facebook & Instagram Ads -->
+            <article class="marketing-item">
+                <img src="./imagenes/meta-ads.png" alt="Meta Ads (Facebook e Instagram)">
+                <h3>Facebook & Instagram Ads</h3>
+                <p>
+                    Plataformas ideales para generar demanda, mostrar tu marca y enviar tráfico frío o tibio a tu Landing.
+                    Funciona muy bien con imágenes, carruseles y videos cortos.
+                </p>
+                <p class="marketing-metricas">
+                    <strong>Beneficios típicos con Landing Page:</strong><br>
+                    • CTR promedio en campañas bien segmentadas: <strong>1% a 3%</strong>.<br>
+                    • Conversión en Landing: <strong>2% a 8%</strong> con oferta clara y buen diseño.<br>
+                    • Reduce el costo por registro/consulta al filtrar curiosos y enfocarse en interesados reales.
+                </p>
+            </article>
+
+            <!-- TikTok Ads -->
+            <article class="marketing-item">
+                <img src="./imagenes/tiktok-ads.png" alt="TikTok Ads">
+                <h3>TikTok Ads</h3>
+                <p>
+                    Excelente para alcance masivo y audiencias jóvenes. Ideal cuando tu mensaje se puede contar en
+                    videos muy cortos y llamativos que dirigen a una Landing simple y directa.
+                </p>
+                <p class="marketing-metricas">
+                    <strong>Beneficios típicos con Landing Page:</strong><br>
+                    • CTR en anuncios de video: <strong>1% a 3%</strong> (a veces más en creatividades virales).<br>
+                    • Conversión en Landing enfocada: <strong>2% a 6%</strong> según claridad de la oferta.<br>
+                    • Gran volumen de tráfico para testear mensajes, creatividades y propuestas.
+                </p>
+            </article>
+
+            <!-- LinkedIn Ads -->
+            <article class="marketing-item">
+                <img src="./imagenes/linkedin-ads.png" alt="LinkedIn Ads">
+                <h3>LinkedIn Ads</h3>
+                <p>
+                    Orientado a B2B, empresas y profesionales. Ideal para servicios corporativos, software, consultorías
+                    y propuestas de alto valor.
+                </p>
+                <p class="marketing-metricas">
+                    <strong>Beneficios típicos con Landing Page:</strong><br>
+                    • CTR habitual: <strong>0.5% a 1.5%</strong> (segmentación muy específica).<br>
+                    • Conversión de leads de alta calidad: <strong>5% a 12%</strong> en Landing profesional.<br>
+                    • Leads con tickets más altos y ciclos de venta más largos, pero más rentables.
+                </p>
+            </article>
+
+            <!-- Email Marketing -->
+            <article class="marketing-item">
+                <img src="./imagenes/mailchimp.png" alt="Email marketing">
+                <h3>Email marketing (Mailchimp / similares)</h3>
+                <p>
+                    Ideal para nutrir contactos, enviar novedades y llevar tráfico recurrente a tu Landing (ej: promociones,
+                    lanzamientos, recordatorios).
+                </p>
+                <p class="marketing-metricas">
+                    <strong>Beneficios típicos con Landing Page:</strong><br>
+                    • Tasa de apertura promedio: <strong>20% a 30%</strong>.<br>
+                    • CTR dentro del email: <strong>2% a 5%</strong>.<br>
+                    • Conversión en Landing para listas bien segmentadas: <strong>5% a 15%</strong>.
+                </p>
+            </article>
+
+            <!-- WhatsApp Business -->
+            <article class="marketing-item">
+                <img src="./imagenes/whatsapp-business.png" alt="WhatsApp Business">
+                <h3>WhatsApp Business</h3>
+                <p>
+                    La Landing se convierte en el puente perfecto entre la campaña y la conversación directa. Un clic
+                    desde la página abre un chat para cerrar ventas en tiempo real.
+                </p>
+                <p class="marketing-metricas">
+                    <strong>Beneficios típicos con Landing Page:</strong><br>
+                    • Altísima tasa de apertura de mensajes: <strong>+80%</strong>.<br>
+                    • Conversión de consulta a venta en negocios bien atendidos: <strong>20% a 40%</strong>.<br>
+                    • Ideal para servicios personalizados, presupuestos y cierres uno a uno.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="card landing-cta-final">
+        <h2>¿Listo para lanzar tu próxima campaña?</h2>
+        <p>
+            Diseñamos tu Landing Page y la preparamos para conectarse con las campañas que mejor se adapten a tu negocio.
+            Vos solo tenés que decidir el objetivo: <strong>consultas, ventas o posicionamiento</strong>.
+        </p>
+        <a href="https://wa.me/541141999497?text=Quiero%20mi%20Landing%20Page%20optimizada"
+           target="_blank"
+           class="btn btn-primary btn-full">
+            Quiero mi landig
+        </a>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-top">
+            <span>2025 © tusitiowebadistancia</span>
+
+            <div class="footer-links">
+                <a href="https://wa.me/541141999497" target="_blank">WhatsApp</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+        </div>
+
+        <div class="footer-thumbs">
+            <img src="./imagenes/logo.png" alt="Logo tusitiowebadistancia">
+        </div>
+    </div>
+</footer>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+<!-- Google Translate Script -->
+<script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {pageLanguage: 'es'},
+            'google_translate_element'
+        );
+    }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

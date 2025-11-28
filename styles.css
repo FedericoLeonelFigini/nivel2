@@ -407,3 +407,324 @@ footer {
 }
 
 /*FIN DE TIENDA*/
+
+/* BLOQUE SERVICIOS + MANTENIMIENTO EN TARJETAS */
+.bloque-servicios {
+    max-width: 1100px;
+    margin: 2.5rem auto 3.5rem;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+/* Columnas */
+.col-principal,
+.col-secundaria {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* Tarjetas base */
+.card {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 1.7rem 1.8rem;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 0.7rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.card p {
+    margin: 0 0 1.1rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Tarjeta principal más grande */
+.card-principal {
+    min-height: 180px;
+}
+
+/* Tarjetas secundarias más compactas */
+.card-secundaria {
+    padding: 1.4rem 1.5rem 1.6rem;
+}
+
+/* Chip superior */
+.chip {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    background: #f1f3f7;
+    color: #555;
+    margin-bottom: 0.4rem;
+}
+
+.chip-azul {
+    background: rgba(13,110,253,0.08);
+    color: #0d6efd;
+}
+
+/* Lista estilizada */
+.lista-servicios {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 1.1rem 0;
+}
+
+.lista-servicios li {
+    position: relative;
+    padding-left: 1.3rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.lista-servicios li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #0d6efd;
+}
+
+/* Botones dentro de tarjetas */
+.btn-outlined {
+    background: #ffffff;
+    border-color: #111;
+}
+
+.btn-outlined:hover {
+    background: #f5f5f5;
+}
+
+.btn-full {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .bloque-servicios {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* TARJETAS UNIFICADAS - SIN ESPACIOS VACÍOS */
+.card {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 1.8rem 1.9rem;
+    background: #ffffff;
+    border-radius: 22px;
+    box-shadow: 0 8px 26px rgba(0,0,0,0.07);
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 0.9rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.card p {
+    margin-bottom: 1.3rem;
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+/* Lista en servicios */
+.lista-servicios {
+    padding-left: 1rem;
+    margin-bottom: 1.3rem;
+}
+
+.lista-servicios li {
+    margin-bottom: 0.4rem;
+}
+
+/* Botón outlined */
+.btn-outlined {
+    background: #ffffff;
+    border: 1px solid #000;
+}
+
+.btn-outlined:hover {
+    background: #f2f2f2;
+}
+
+/* Botón ancho completo */
+.btn-full {
+    width: 100%;
+    text-align: center;
+}
+
+/* Botón ancho completo, pero contenido dentro de la tarjeta */
+.card .btn-full {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+    border-radius: 999px;
+}
+.seccion-mantenimiento .btn-full {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    box-sizing: border-box;
+    border-radius: 999px;
+}
+
+.seccion-mantenimiento {
+    padding: 1.8rem 1.9rem;
+    border-radius: 22px;
+    background: #ffffff;
+}
+
+.seccion-mantenimiento {
+    animation: fadeUp 0.6s ease-out;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.seccion-mantenimiento .btn-primary {
+    border-color: #0d6efd;
+}
+
+.seccion-mantenimiento .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(13,110,253,0.45);
+}
+
+/*EFECTO H1 H1 H1*/
+/* === HERO PLANES (Landing / Multipágina / E-commerce) === */
+
+.plan-hero-section {
+    padding: 60px 16px;
+    background: #f4f6fb;              /* gris muy claro */
+}
+
+.plan-hero {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px 32px 28px;
+    border-radius: 20px;
+    background: linear-gradient(135deg,
+        rgba(0, 114, 255, 0.02),
+        rgba(0, 114, 255, 0.08)
+    );
+    border: 1px solid rgba(0, 114, 255, 0.18);
+    box-shadow: 0 18px 40px rgba(15, 39, 80, 0.12);
+    position: relative;
+    overflow: hidden;
+    transform: translateY(14px);
+    opacity: 0;
+    animation: planHeroFadeUp .7s ease-out forwards;
+}
+
+/* banda azul a la izquierda */
+.plan-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 5px;
+    background: linear-gradient(to bottom, #007bff, #00a3ff);
+    opacity: 0.9;
+}
+
+/* contenido interno */
+.plan-hero-content {
+    margin-left: 18px; /* corre para no tapar la banda azul */
+    position: relative;
+    z-index: 1;
+}
+
+.plan-title {
+    font-size: clamp(2.1rem, 3vw, 2.6rem);
+    font-weight: 700;
+    color: #007bff;
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+}
+
+.plan-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #374151;
+}
+
+/* hover sutil */
+.plan-hero:hover {
+    transform: translateY(0) scale(1.01);
+    box-shadow: 0 22px 55px rgba(15, 39, 80, 0.18);
+}
+
+.plan-hero:hover .plan-title {
+    text-shadow: 0 0 16px rgba(0, 123, 255, 0.45);
+}
+
+/* animación de entrada */
+@keyframes planHeroFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .plan-hero-section {
+        padding: 40px 14px;
+    }
+
+    .plan-hero {
+        padding: 24px 22px 22px;
+        border-radius: 16px;
+    }
+
+    .plan-hero-content {
+        margin-left: 14px;
+    }
+
+    .plan-title {
+        font-size: 1.8rem;
+    }
+
+    .plan-text {
+        font-size: 0.96rem;
+    }
+}
